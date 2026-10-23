@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گالری تصاویر</title>
+<style>
+:root{
+  --bg:#f3f5f4; --ink:#1c2a30; --muted:#5d6d73; --line:#d5dcdc;
+  --accent:#1f4e79; --accent-ink:#fff; --card:#fff;
+  --font:Vazirmatn,"IRANSansX",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141b1e; --ink:#e8eeee; --muted:#9fb0b4; --line:#2b383c; --accent:#7fb2e0; --accent-ink:#0c1a24; --card:#1b2528}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.7}
+header{padding:28px 20px 8px;max-width:1200px;margin:auto}
+h1{margin:0 0 4px;font-size:1.6rem;font-weight:700}
+header p{margin:0;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding:16px 20px;max-width:1200px;margin:auto}
+.filters button{font:inherit;padding:6px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.grid{column-width:260px;column-gap:14px;max-width:1200px;margin:0 auto;padding:0 20px 40px}
+.item{break-inside:avoid;margin:0 0 14px;background:var(--card);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.item button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.item img{display:block;width:100%;height:auto}
+.item figcaption{padding:8px 12px;font-size:.9rem}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;color:#fff}
+dialog::backdrop{background:rgba(8,12,14,.88)}
+.box{display:flex;flex-direction:column;align-items:center;gap:10px}
+.box img{max-width:94vw;max-height:80vh;width:auto;height:auto;border-radius:4px}
+.box p{margin:0;text-align:center;max-width:70ch}
+.ctl{display:flex;gap:10px}
+.ctl button{font:inherit;padding:6px 18px;border-radius:6px;border:1px solid #fff6;background:#0006;color:#fff;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <h1>گالری تصاویر</h1>
+  <p id="count"></p>
+</header>
+<nav class="filters" id="filters" aria-label="فیلتر دسته‌ها"></nav>
+<main class="grid" id="grid"></main>
+
+<dialog id="viewer" aria-label="نمایش بزرگ تصویر">
+  <div class="box">
+    <img id="vimg" alt="">
+    <p id="vcap"></p>
+    <div class="ctl">
+      <button id="next" type="button">بعدی</button>
+      <button id="prev" type="button">قبلی</button>
+      <button id="close" type="button">بستن</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="images.js"></script>
+<script>
+(function(){
+  var G = window.GALLERY, all = G.images, shown = all, idx = 0;
+  var grid = document.getElementById('grid'), filters = document.getElementById('filters');
+  var dlg = document.getElementById('viewer'), vimg = document.getElementById('vimg'), vcap = document.getElementById('vcap');
+
+  function render(){
+    grid.innerHTML = '';
+    shown.forEach(function(it, i){
+      var fig = document.createElement('figure'); fig.className = 'item';
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'بزرگ‌نمایی: ' + it.title_fa);
+      var img = document.createElement('img');
+      img.src = it.thumb; img.alt = it.alt_fa; img.width = Math.round(it.width / 3); img.height = Math.round(it.height / 3);
+      img.loading = 'lazy'; img.decoding = 'async';
+      b.appendChild(img); b.addEventListener('click', function(){ open(i); });
+      var cap = document.createElement('figcaption'); cap.textContent = it.title_fa;
+      fig.appendChild(b); fig.appendChild(cap); grid.appendChild(fig);
+    });
+    document.getElementById('count').textContent = shown.length + ' تصویر';
+  }
+  function open(i){ idx = i; show(); if(!dlg.open) dlg.showModal(); }
+  function show(){ var it = shown[idx]; vimg.src = it.file; vimg.alt = it.alt_fa; vcap.textContent = it.title_fa + ' — ' + it.alt_fa; }
+  function step(d){ idx = (idx + d + shown.length) % shown.length; show(); }
+
+  function chip(label, id){
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.dataset.id = id;
+    b.setAttribute('aria-pressed', id === 'all' ? 'true' : 'false');
+    b.addEventListener('click', function(){
+      shown = id === 'all' ? all : all.filter(function(x){ return x.category === id; });
+      Array.prototype.forEach.call(filters.children, function(c){ c.setAttribute('aria-pressed', String(c === b)); });
+      render();
+    });
+    filters.appendChild(b);
+  }
+  chip('همه', 'all');
+  G.categories.forEach(function(c){ chip(c.title_fa, c.id); });
+
+  document.getElementById('close').addEventListener('click', function(){ dlg.close(); });
+  document.getElementById('next').addEventListener('click', function(){ step(1); });
+  document.getElementById('prev').addEventListener('click', function(){ step(-1); });
+  dlg.addEventListener('click', function(e){ if(e.target === dlg) dlg.close(); });
+  document.addEventListener('keydown', function(e){
+    if(!dlg.open) return;
+    if(e.key === 'ArrowLeft') step(1);      // RTL: left = next
+    if(e.key === 'ArrowRight') step(-1);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
