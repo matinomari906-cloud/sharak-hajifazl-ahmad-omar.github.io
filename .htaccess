@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Redirect non-www and non-https to https://www.alhajfazalahmadomartown.com
-RewriteCond %{HTTP_HOST} !^https://alhajfazalahmadomartown\.com.github.io [NC]
+RewriteCond %{HTTP_HOST} !^www\.alhajfazalahmadomartown\.com$ [NC]
 RewriteRule ^(.*)$ https://www.alhajfazalahmadomartown.com/$1 [R=301,L]
 
 RewriteCond %{HTTPS} off
