@@ -1,31 +1,6 @@
 {
-<<<<<<< Updated upstream
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/DELL/OneDrive/Pictures/Attachments/Documents/GitHub/sharak-hajifazl-ahmad-omar.github.io",
-      "program": "c:/Users/DELL/OneDrive/Pictures/Attachments/Documents/GitHub/sharak-hajifazl-ahmad-omar.github.io/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    }
-  ]
-=======
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Python Debugger: Current File",
             "type": "debugpy",
@@ -39,20 +14,6 @@
             "request": "launch",
             "console": "externalTerminal",
             "mainClass": ""
-        },
-        {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
         },
         {
             "name": "Launch",
@@ -82,5 +43,4 @@
             ]
         }
     ]
->>>>>>> Stashed changes
 }
