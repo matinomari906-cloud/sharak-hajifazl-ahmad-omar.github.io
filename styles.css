@@ -184,9 +184,8 @@ textarea {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: url("images/hero.svg") center/cover no-repeat;
-  opacity: 0.28;
-  transform: scale(1.08);
+  background: url("boulevard-junction-haze-04.jpg") center/cover no-repeat;
+  opacity: 0.2;
 }
 
 .hero-inner {
@@ -341,7 +340,7 @@ textarea {
 }
 
 .about-grid,
-.map-grid,
+.location-grid,
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -350,7 +349,7 @@ textarea {
 }
 
 .about-image img,
-.map-card img {
+.location-image img {
   width: 100%;
   min-height: 420px;
   object-fit: cover;
@@ -529,6 +528,12 @@ textarea {
   grid-column: span 2;
 }
 
+.gallery-more {
+  display: flex;
+  width: fit-content;
+  margin: 24px auto 0;
+}
+
 .faq-section {
   background: #f6f9f8;
 }
@@ -560,36 +565,40 @@ textarea {
   color: var(--muted);
 }
 
-.map-info h2 {
+.location-info h2 {
   margin: 16px 0 12px;
   font-size: clamp(1.6rem, 3vw, 2.5rem);
 }
 
-.map-info p,
-.map-info li,
+.location-info p,
+.location-info li,
 .contact-info-box p,
 .contact-list li {
   color: var(--muted);
 }
 
-.map-info ul,
+.location-info ul,
 .contact-list {
   list-style: none;
   padding: 0;
   margin: 18px 0 0;
 }
 
-.map-info li,
+.location-info li,
 .contact-list li {
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-.map-info li::before,
+.location-info li::before,
 .contact-list li::before {
   content: "•";
   color: var(--brand);
   margin-left: 10px;
+}
+
+.location-info .btn {
+  margin-top: 12px;
 }
 
 .contact-section {
@@ -750,7 +759,7 @@ textarea {
 
   .hero-inner,
   .about-grid,
-  .map-grid,
+  .location-grid,
   .contact-grid,
   .footer-inner {
     grid-template-columns: 1fr;
