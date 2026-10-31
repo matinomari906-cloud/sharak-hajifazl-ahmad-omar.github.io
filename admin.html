@@ -65,7 +65,7 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">درخواست اطلاعات</a>
               <a class="btn btn-secondary" href="#about">معرفی پروژه</a>
-              <a class="btn btn-whatsapp" href="https://wa.me/93797104648" target="_blank" rel="noopener">واتساپ</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/93797104648" target="_blank" rel="noopener noreferrer" aria-label="ارتباط مستقیم در واتساپ (باز شدن در پنجره جدید)">واتساپ</a>
             </div>
           </div>
 
@@ -273,14 +273,15 @@
 
           <form class="contact-form" id="leadForm" novalidate>
             <h3>درخواست اطلاعات</h3>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
             <div class="field-row">
               <div class="field">
-                <label for="name">نام</label>
-                <input id="name" name="name" type="text" placeholder="نام شما" required />
+                <label for="name">نام و نام خانوادگی <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" placeholder="نام و تخلص شما" autocomplete="name" required aria-required="true" />
               </div>
               <div class="field">
-                <label for="phone">شماره تماس</label>
-                <input id="phone" name="phone" type="tel" placeholder="07XXXXXXXX" required />
+                <label for="phone">شماره تماس <span class="req" aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" placeholder="مثال: 0778800100" autocomplete="tel" required aria-required="true" />
               </div>
             </div>
 
