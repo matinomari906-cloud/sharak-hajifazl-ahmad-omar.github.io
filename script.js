@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
           statusNode.textContent = errorMsg;
           statusNode.className = 'form-status error';
         }
-        alert(errorMsg);
         return;
       } else if (statusNode) {
         statusNode.textContent = '';
