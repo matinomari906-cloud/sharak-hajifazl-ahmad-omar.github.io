@@ -1,378 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0b6268" />
-    <meta name="description" content="شهرک رهایشی حاجی فضل احمد عمر | پروژه رهایشی و شهری در مزارشریف، ولایت بلخ. اطلاعات، امکانات، پلان، و تماس مستقیم با دفتر شهرک." />
-    <meta name="keywords" content="شهرک رهایشی حاجی فضل احمد عمر, شهرک آزادی, زمین رهایشی, مزارشریف, ولایت بلخ, شهرک مسکونی" />
-    <meta property="og:title" content="شهرک رهایشی حاجی فضل احمد عمر" />
-    <meta property="og:description" content="پروژه شهری و رهایشی با مساحت ۸۶۰۹ جریب در مزارشریف، ولایت بلخ." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="landmark-tower-dusk-01.jpg" />
-    <meta property="og:image:alt" content="برج تزئینی با قوس‌های طلایی و داربست در نور غروب" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>شهرک رهایشی حاجی فضل احمد عمر | مزارشریف</title>
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">پرش به محتوای اصلی</a>
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <span>شهرک رهایشی حاجی فضل احمد عمر · مزارشریف، ولایت بلخ</span>
-        <a href="tel:+93778800100">تماس: 0778800100</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شهرک رهایشی حاجی فضل احمد عمر | مزارشریف</title>
+  <meta name="description" content="وبسایت رسمی شهرک رهایشی حاجی فضل احمد عمر در دشت شور مزارشریف، ناحیه نهم. مساحت ۸۶۰۹ جریب با پلان تفصیلی منظورشده وزارت شهرسازی و مسکن." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">ش</span>
+        <div>
+          <strong>شهرک رهایشی حاجی فضل احمد عمر</strong>
+          <small>مزارشریف • ولایت بلخ</small>
+        </div>
+      </a>
+
+      <button id="menuToggle" class="menu-toggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+
+      <nav id="navLinks" class="nav-links">
+        <a href="index.html" class="active">خانه</a>
+        <a href="#masterplan">پلان و کاربری‌ها</a>
+        <a href="#services">خدمات شهری</a>
+        <a href="#steps">دریافت تکت</a>
+        <a href="gallery.html">گالری تصاویر</a>
+        <a href="#contact" class="btn btn-sm">تماس با دفتر</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- بخش معرفی اصلی -->
+    <section class="hero">
+      <img src="landmark-01.jpg" alt="نمای شهرک رهایشی حاجی فضل احمد عمر" class="hero-bg smart-img" data-filename="landmark-01.jpg" />
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="pill">پلان ویزه و منظورشده وزارت شهرسازی و مسکن</span>
+        <h1>شهرک رهایشی حاجی فضل احمد عمر</h1>
+        <p>
+          پروژه معیاری شهری و رهایشی در دشت شور مزارشریف (ناحیه نهم، سرک چهل‌متره) با مساحت
+          <strong>۸٬۶۰۹ جریب</strong>؛ شامل بلاک‌های رهایشی، نمرات تجارتی، بلندمنزل‌ها و خدمات کامل شهری.
+        </p>
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn btn-primary">مشاهده گالری تصاویر</a>
+          <a href="#contact" class="btn btn-outline">تماس با دفتر رسمی شهرک</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- آمار کلیدی -->
+    <section class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <strong>۸٬۶۰۹ جریب</strong>
+          <span>مساحت مجموعی پروژه</span>
+        </div>
+        <div class="stat-item">
+          <strong>۱۲، ۲۰ و ۳۰ متر</strong>
+          <span>عرض شبکه سرک و پیاده‌روها</span>
+        </div>
+        <div class="stat-item">
+          <strong>تا ۵ منزل</strong>
+          <span>بلندمنزل‌های رهایشی در پلان</span>
+        </div>
+        <div class="stat-item">
+          <strong>تا ۳ منزل</strong>
+          <span>ساحات تجارتی و مارکیت‌ها</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- پلان و کاربری‌ها -->
+    <section id="masterplan" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>معرفی و کاربری‌های پلان تفصیلی</h2>
+          <p>این شهرک (که پیش‌تر با نام شهرک آزادی شناخته می‌شد) بر اساس پلان تفصیلی منظورشده وزارت شهرسازی و مسکن طراحی گردیده است.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>بلاک‌ها و نمرات رهایشی</h3>
+            <p>نمرات منظم رهایشی برای ساخت‌وساز خانوادگی و زندگی آرام با دسترسی مستقیم به سرک‌های داخلی.</p>
+          </article>
+          <article class="card">
+            <h3>ساحات تجارتی و مارکیت‌ها</h3>
+            <p>نمرات تجارتی و مارکیت‌ها تا سه منزل جهت راه‌اندازی کسب‌وکار، فروشگاه‌ها و مراکز خدماتی.</p>
+          </article>
+          <article class="card">
+            <h3>بلندمنزل‌های رهایشی</h3>
+            <p>بخش‌های مشخص‌شده برای اعمار بلندمنزل‌های رهایشی تا پنج منزل مطابق نقشه شهری.</p>
+          </article>
+          <article class="card">
+            <h3>شبکه سرک و بلوارها</h3>
+            <p>سرک‌ها و پیاده‌روهای عریض با عرض‌های ۱۲، ۲۰ و ۳۰ متر برای رفت‌وآمد آسان در تمام قسمت‌های شهرک.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- خدمات شهری -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>خدمات شهری پیش‌بینی‌شده در پلان</h2>
+          <p>جزئیات و زمان اجرا یا وضعیت هر بخش را می‌توانید مستقیماً از دفتر رسمی شهرک جویا شوید.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-box">مسجد جامع و مساجد ساحوی</div>
+          <div class="service-box">مکتب و لیسه</div>
+          <div class="service-box">کلینیک و شفاخانه</div>
+          <div class="service-box">پارک و فضای سبز</div>
+          <div class="service-box">شبکه آب، برق و فاضلاب</div>
+          <div class="service-box">بانک و خدمات شهری</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- گالری برگزیده -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head-row">
+          <div>
+            <h2>تصاویری از شهرک و پیشرفت کار</h2>
+            <p>نماهایی از بلوارها، میدان‌ها، سرک‌ها، فضای سبز و روند ساخت‌وساز</p>
+          </div>
+          <a href="gallery.html" class="btn btn-outline-dark">مشاهده همه تصاویر ←</a>
+        </div>
+
+        <div id="featured-gallery" class="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- چهار گام تا دریافت تکت -->
+    <section id="steps" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>چهار گام تا دریافت تکت</h2>
+          <p>مراحل رسمی بررسی و دریافت تکت خاکی از دفتر شهرک</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">۱</span>
+            <h3>انتخاب</h3>
+            <p>نوع ملک و ساحه مورد نظر خود را در شهرک مشخص کنید.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">۲</span>
+            <h3>بررسی پلان</h3>
+            <p>بلاک، شماره نمره و موقعیت دقیق را روی پلان در دفتر ببینید.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">۳</span>
+            <h3>دریافت معلومات</h3>
+            <p>قیمت، شرایط و موجودیت نمرات را مستقیماً از دفتر شهرک بگیرید.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">۴</span>
+            <h3>دریافت تکت</h3>
+            <p>پس از تأیید نهایی و تکمیل معامله، تکت خاکی را از دفتر دریافت کنید.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تماس و آدرس -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2>موقعیت و راهنمای مراجعه</h2>
+          <ul class="contact-list">
+            <li><strong>موقعیت شهرک:</strong> مزارشریف، ولایت بلخ، دشت شور، ناحیه نهم، سرک چهل‌متره</li>
+            <li><strong>دفتر رسمی:</strong> قسمت چهارم شهرک رهایشی حاجی فضل احمد عمر</li>
+            <li><strong>شماره تماس ۱:</strong> <a href="tel:+93778800100" dir="ltr">0778800100</a></li>
+            <li><strong>شماره تماس ۲:</strong> <a href="tel:+93797104648" dir="ltr">0797104648</a></li>
+          </ul>
+        </div>
+
+        <div class="notice-card">
+          <h3>توصیه مهم پیش از معامله</h3>
+          <p>
+            قیمت، موجودیت، مشخصات دقیق نمرات، کاربری ساحه و اسناد حقوقی باید پیش از هرگونه معامله مستقیماً از
+            <strong>دفتر رسمی شهرک</strong> در قسمت چهارم استعلام و تأیید شود.
+          </p>
+          <a href="tel:+93778800100" class="btn btn-primary">تماس مستقیم با دفتر</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© ۱۴۰۵ شهرک رهایشی حاجی فضل احمد عمر — مزارشریف، ولایت بلخ</p>
+      <div class="footer-links">
+        <a href="index.html">خانه</a>
+        <a href="gallery.html">گالری تصاویر</a>
+        <a href="#contact">تماس</a>
       </div>
     </div>
+  </footer>
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#home" class="brand" aria-label="خانه">
-          <img src="images/logo.svg" alt="نشان رسمی شهرک رهایشی حاجی فضل احمد عمر" width="52" height="52" />
-          <div>
-            <strong>شهرک رهایشی</strong>
-            <small>حاجی فضل احمد عمر</small>
-          </div>
-        </a>
+  <!-- مودال نمایش بزرگ تصویر -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightbox-close" class="lightbox-close" aria-label="بستن">×</button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="تصویر قبلی">‹</button>
+    <div class="lightbox-body">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="تصویر بعدی">›</button>
+  </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="منوی ناوبری">
-          ☰
-        </button>
-
-        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
-          <a href="#home">خانه</a>
-          <a href="#about">درباره</a>
-          <a href="#features">امکانات</a>
-          <a href="#progress">پیشرفت</a>
-          <a href="#gallery">گالری</a>
-          <a href="#faq">پرسش‌ها</a>
-          <a href="#contact">تماس</a>
-          <a class="nav-btn" href="#contact">درخواست اطلاعات</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content" tabindex="-1">
-      <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <span class="eyebrow">پروژه شهری و رهایشی</span>
-            <h1>زندگی آرام در <span>شهرک رهایشی</span> حاجی فضل احمد عمر</h1>
-            <p>
-              شهرک رهایشی حاجی فضل احمد عمر در مزارشریف، ولایت بلخ، با مساحت ۸۶۰۹ جریب،
-              برنامه‌ریزی دقیق، ساختاری منظم و پلان تفصیلی ویژه، فضایی مناسب برای
-              زندگی، سرمایه‌گذاری و توسعه شهری فراهم می‌کند.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">درخواست اطلاعات</a>
-              <a class="btn btn-secondary" href="#about">معرفی پروژه</a>
-              <a class="btn btn-whatsapp" href="https://wa.me/93797104648" target="_blank" rel="noopener noreferrer" aria-label="ارتباط مستقیم در واتساپ (باز شدن در پنجره جدید)">واتساپ</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <img src="landmark-tower-dusk-01.jpg" alt="برج تزئینی با قوس‌های طلایی و حلقهٔ چراغ رنگی، با داربست در نور غروب" width="1920" height="1440" fetchpriority="high" />
-          </div>
-        </div>
-      </section>
-
-      <section class="stats">
-        <div class="container stat-grid">
-          <div class="stat-item">
-            <strong>۸۶۰۹</strong>
-            <span>جریب مساحت</span>
-          </div>
-          <div class="stat-item">
-            <strong>۱۲–۳۰</strong>
-            <span>عرض سرک‌ها</span>
-          </div>
-          <div class="stat-item">
-            <strong>رهایشی</strong>
-            <span>و تجاری</span>
-          </div>
-          <div class="stat-item">
-            <strong>مزارشریف</strong>
-            <span>موقعیت اصلی</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container about-grid">
-          <div class="about-image">
-            <img src="road-aerial-plain-01.jpg" alt="نمای بلند از جادهٔ دوبانده و قطعات دیوارکشی‌شده در دشت" width="1920" height="1440" loading="lazy" decoding="async" />
-          </div>
-
-          <div class="about-copy">
-            <span class="kicker">درباره شهرک</span>
-            <h2>محیطی منظم و مناسب برای زندگی و سرمایه‌گذاری</h2>
-            <p>
-              شهرک رهایشی حاجی فضل احمد عمر در دشت شور مزارشریف واقع شده و با تمرکز بر
-              نظم شهری، دسترسی مطلوب و امکانات عمومی، فضایی مناسب برای خانواده‌ها و
-              سرمایه‌گذاران فراهم آورده است.
-            </p>
-            <p>
-              این پروژه با پلان تفصیلی و پیش‌بینی خدمات شهری، شامل مناطق رهایشی، تجاری،
-              معابر منظم، فضای سبز، مراکز خدماتی و امکانات عمومی می‌باشد.
-            </p>
-
-            <ul class="check-list">
-              <li>دسترسی به مسیرهای اصلی شهر</li>
-              <li>فضای سبز و آرام</li>
-              <li>پلان تفصیلی و منظّم</li>
-              <li>امکانات شهری و خدمات عمومی</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt-bg" id="features">
-        <div class="container">
-          <div class="section-heading">
-            <span class="kicker">امکانات</span>
-            <h2>ویژگی‌های اصلی پروژه</h2>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature-card">
-              <div class="icon">🏠</div>
-              <h3>نمرات رهایشی</h3>
-              <p>بلاک‌ها و نمرات مناسب برای ساخت و سکونت خانوادگی.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">🛍️</div>
-              <h3>ساحات تجاری</h3>
-              <p>بخش‌های تجاری و مارکیت برای کسب‌وکار و خدمات شهری.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">🛣️</div>
-              <h3>سرک‌های استاندارد</h3>
-              <p>سرک‌های داخلی با عرض ۱۲، ۲۰ و ۳۰ متر برای دسترسی آسان.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">🕌</div>
-              <h3>مساجد و خدمات</h3>
-              <p>مسجد، مکتب، کلینیک و خدمات عمومی در داخل شهرک.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">🌿</div>
-              <h3>فضای سبز</h3>
-              <p>پارک‌ها و سطوح سبز برای آرامش و تفریح خانواده‌ها.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">⚡</div>
-              <h3>آب، برق و فاضلاب</h3>
-              <p>تأمین زیرساخت‌های ضروری جهت سکونت و توسعه شهری.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section progress-section" id="progress">
-        <div class="container">
-          <div class="section-heading">
-            <span class="kicker">پیشرفت پروژه</span>
-            <h2>مسیر توسعه شهرک</h2>
-          </div>
-
-          <div class="timeline">
-            <div class="timeline-item done">
-              <div class="dot">✓</div>
-              <div class="content">
-                <span>۱۳۹۰</span>
-                <h3>آغاز پروژه</h3>
-                <p>بررسی و انتخاب ساحه مناسب برای شهرک در دشت شور مزارشریف.</p>
-              </div>
-            </div>
-            <div class="timeline-item done">
-              <div class="dot">✓</div>
-              <div class="content">
-                <span>۱۳۹۵</span>
-                <h3>تأیید پلان تفصیلی</h3>
-                <p>پلان شهرک با حوزه‌های رهایشی، تجاری و خدماتی مشخص شد.</p>
-              </div>
-            </div>
-            <div class="timeline-item done">
-              <div class="dot">✓</div>
-              <div class="content">
-                <span>۱۴۰۰</span>
-                <h3>ساخت سرک‌های اصلی</h3>
-                <p>شروع ساخت معابر داخلی و هماهنگی با خدمات شهری پایه.</p>
-              </div>
-            </div>
-            <div class="timeline-item active">
-              <div class="dot">•</div>
-              <div class="content">
-                <span>اطلاعات به‌روز</span>
-                <h3>استعلام از دفتر شهرک</h3>
-                <p>برای آگاهی از وضعیت فعلی آماده‌سازی نمرات، شرایط معامله و امکان بازدید، با دفتر شهرک تماس بگیرید.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section gallery-section" id="gallery">
-        <div class="container">
-          <div class="section-heading">
-            <span class="kicker">گالری</span>
-            <h2>تصاویر پروژه و منطقه</h2>
-          </div>
-
-          <div class="gallery-grid">
-            <figure class="gallery-item wide">
-              <img src="boulevard-junction-haze-04.jpg" alt="نمای عریض از بلوار و تقاطع به‌سمت میدان، با زمین‌های خالی در دو سو" width="1920" height="1080" loading="lazy" decoding="async" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="landscape-plots-mountains-01.jpg" alt="نمای بلند از قطعات خالی و جاده، با شهر و رشته‌کوه در دوردست" width="1920" height="1440" loading="lazy" decoding="async" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="road-aerial-plain-01.jpg" alt="جادهٔ دوبانده در میان دشت و قطعات دیوارکشی‌شده" width="1920" height="1440" loading="lazy" decoding="async" />
-            </figure>
-            <figure class="gallery-item wide">
-              <img src="landscape-city-green-dome-01.jpg" alt="نمای شهر با گنبد سبزرنگ و کوه‌ها در پس‌زمینه" width="1920" height="1371" loading="lazy" decoding="async" />
-            </figure>
-          </div>
-          <a class="btn btn-primary gallery-more" href="gallery.html">دیدن همهٔ تصاویر پروژه</a>
-        </div>
-      </section>
-
-      <section class="section faq-section" id="faq">
-        <div class="container">
-          <div class="section-heading">
-            <span class="kicker">سوالات متداول</span>
-            <h2>پرسش‌های پرتکرار</h2>
-          </div>
-
-          <div class="faq-list">
-            <details open>
-              <summary>چگونه نمره یا پلاک مناسب را پیدا کنیم؟</summary>
-              <p>می‌توانید با دفتر شهرک تماس بگیرید و نوع ملک، موقعیت و نمره مورد نظر را اعلام کنید تا اطلاعات دقیق‌تر ارائه شود.</p>
-            </details>
-            <details>
-              <summary>قیمت‌ها در سایت درج شده‌اند؟</summary>
-              <p>خیر، قیمت و شرایط معامله هر نمره باید مستقیماً از دفتر رسمی شهرک تأیید شود.</p>
-            </details>
-            <details>
-              <summary>آیا بازدید از پروژه ممکن است؟</summary>
-              <p>بله، برای هماهنگی بازدید از پروژه با دفتر شهرک تماس بگیرید یا درخواست خود را از طریق واتساپ ارسال کنید.</p>
-            </details>
-            <details>
-              <summary>نوع زمین‌ها چه هستند؟</summary>
-              <p>پروژه شامل نمرات رهایشی، تجاری و خدماتی با پلان تفصیلی و خرده‌بندی شهری مشخص است.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section location-section" id="location">
-        <div class="container location-grid">
-          <div class="location-image">
-            <img src="landscape-plots-mountains-01.jpg" alt="نمای قطعات زمین و جاده در دشت، با شهر و رشته‌کوه در دوردست" width="1920" height="1440" loading="lazy" decoding="async" />
-          </div>
-          <div class="location-info">
-            <span class="kicker">موقعیت</span>
-            <h2>دشت شور، مزارشریف، ولایت بلخ</h2>
-            <p>
-              شهرک در نزدیکی مناطق مسکونی و خدماتی مزارشریف واقع شده و دسترسی به نقاط
-              اصلی شهر را برای ساکنان و خریداران ساده می‌کند.
-            </p>
-            <ul>
-              <li>دشت شور، مزارشریف</li>
-              <li>ولایت بلخ، افغانستان</li>
-              <li>برای دریافت نشانی دقیق، با دفتر شهرک تماس بگیرید.</li>
-            </ul>
-            <a class="btn btn-primary" href="https://wa.me/93797104648" target="_blank" rel="noopener noreferrer">دریافت نشانی و هماهنگی بازدید</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="container contact-grid">
-          <div class="contact-info-box">
-            <span class="kicker light">تماس مستقیم</span>
-            <h2>برای دریافت اطلاعات، با دفتر شهرک تماس بگیرید</h2>
-            <p>شماره‌های تماس و اطلاعات پایه پروژه در زیر درج شده‌اند.</p>
-
-            <ul class="contact-list">
-              <li><strong>تلفن:</strong> <a href="tel:+93778800100">0778800100</a></li>
-              <li><strong>تلفن:</strong> <a href="tel:+93797104648">0797104648</a></li>
-              <li><strong>آدرس:</strong> مزارشریف، ولایت بلخ</li>
-              <li><strong>دفتر:</strong> داخل شهرک، بخش مدیریتی</li>
-            </ul>
-          </div>
-
-          <form class="contact-form" id="leadForm" novalidate>
-            <h3>درخواست اطلاعات</h3>
-            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-            <div class="field-row">
-              <div class="field">
-                <label for="name">نام و نام خانوادگی <span class="req" aria-hidden="true">*</span></label>
-                <input id="name" name="name" type="text" placeholder="نام و تخلص شما" autocomplete="name" required aria-required="true" />
-              </div>
-              <div class="field">
-                <label for="phone">شماره تماس <span class="req" aria-hidden="true">*</span></label>
-                <input id="phone" name="phone" type="tel" placeholder="مثال: 0778800100" autocomplete="tel" required aria-required="true" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="property">نوع ملک مورد نظر</label>
-              <select id="property" name="property" aria-label="نوع ملک مورد نظر">
-                <option value="نمره رهایشی">نمره رهایشی</option>
-                <option value="نمره تجاری">نمره تجاری</option>
-                <option value="بلندمنزل">بلندمنزل</option>
-                <option value="سایر">سایر</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="message">پیام یا توضیحات تکمیلی</label>
-              <textarea id="message" name="message" rows="4" placeholder="توضیح درباره موقعیت نمره، متراژ یا سوالات شما"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn" aria-label="ارسال درخواست اطلاعات در واتساپ">ارسال در واتساپ</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <div class="footer-brand">
-            <img src="images/logo.svg" alt="نشان رسمی شهرک رهایشی حاجی فضل احمد عمر" width="40" height="40" />
-            <strong>شهرک رهایشی حاجی فضل احمد عمر</strong>
-          </div>
-          <p>پروژه شهری و رهایشی در مزارشریف، ولایت بلخ</p>
-        </div>
-
-        <div>
-          <h4>پیوندها</h4>
-          <ul>
-            <li><a href="#about">درباره شهرک</a></li>
-            <li><a href="#features">امکانات</a></li>
-            <li><a href="#progress">پیشرفت</a></li>
-            <li><a href="#contact">تماس</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>تماس</h4>
-          <ul>
-            <li><a href="tel:+93778800100">0778800100</a></li>
-            <li><a href="tel:+93797104648">0797104648</a></li>
-            <li>مزارشریف، بلخ</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="copyright">© <span id="year"></span> شهرک رهایشی حاجی فضل احمد عمر. تمامی حقوق محفوظ است.</div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
